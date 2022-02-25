@@ -1,7 +1,6 @@
 import './App.css';
 import Header from './components/Header';
-import HelpForm from './components/HelpForm';
-import TicketHistory from './components/TicketHistory';
+import TicketManager from './components/TicketManager';
 
 
 export default function App() {
@@ -9,10 +8,8 @@ export default function App() {
     <div>
       <section id="form-section"> 
         <Header/>
-        <HelpForm/>
-        </section>
-        <hr></hr>
-        <TicketHistory/>
+        <TicketManager />
+      </section>
     </div>
   );
 }
