@@ -4,10 +4,10 @@ import TicketHistory from "./TicketHistory";
 
 export default function TicketManager() {
         const ticketList = [
-        {username: "Adam", problem: "Don't understand React!", zoomUrl:"zoom-link", resolved: true}, 
-        {username: "Steve", problem: "Don't get React!", zoomUrl:"zoom-link-2", resolved: false}, 
-        {username: "John", problem: "Don't want to do React!", zoomUrl:"zoom-link-3", resolved: false}
-        ] ;
+          {username: "Adam", problem: "Don't understand React!", zoomUrl:"zoom-link", resolved: true, tutor: "Jim"}, 
+          {username: "Steve", problem: "Don't get React!", zoomUrl:"zoom-link-2", resolved: false, tutor: "August"}, 
+          {username: "John", problem: "Don't want to do React!", zoomUrl:"zoom-link-3", resolved: false, tutor: "Dave"}
+        ];
     
         const [tickets, setTickets] = useState(ticketList);
     
