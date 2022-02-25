@@ -4,9 +4,9 @@ import TicketItem from "./TicketItem";
 export default function TicketHistory() {
     
     const ticketList = [
-    {name: "Adam", problem: "Don't understand React!", zoomUrl:"zoom-link", resolved: true}, 
-    {name: "Steve", problem: "Don't get React!", zoomUrl:"zoom-link-2", resolved: false}, 
-    {name: "John", problem: "Don't want to do React!", zoomUrl:"zoom-link-3", resolved: false}
+    {username: "Adam", problem: "Don't understand React!", zoomUrl:"zoom-link", resolved: true}, 
+    {username: "Steve", problem: "Don't get React!", zoomUrl:"zoom-link-2", resolved: false}, 
+    {username: "John", problem: "Don't want to do React!", zoomUrl:"zoom-link-3", resolved: false}
     ] ;
 
     const [tickets, setTickets] = useState(ticketList);
@@ -21,6 +21,12 @@ export default function TicketHistory() {
            }
         })
         setTickets(updatedTickets);
+    }
+
+    const addTicket = (ticketToAdd) => {
+      setTickets((tickets) =>{
+        return [ticketToAdd, ...tickets]
+      })
     }
 
       return (

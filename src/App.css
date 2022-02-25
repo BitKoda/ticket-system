@@ -43,7 +43,15 @@ h1, h2, h3 {
     text-align: center;
 }
 
+#ticketHistoryContainer ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0px;
+}
+
 #ticketHistoryContainer ul li.single-ticket-list {
+    width: 50%;
     text-align: left;
     border: 1px solid #000;
     padding: 30px;

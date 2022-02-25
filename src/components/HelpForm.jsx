@@ -1,15 +1,18 @@
 import {useState} from "react";
 
 export default function HelpForm() {
-    const [form, setForm] = useState({username: "", problem: "", zoomUrl: ""})
+    const [form, setForm] = useState({username: "", problem: "", zoomUrl: "", resolved: false})
     const handleChange = (e) => {
         const name = e.target.name;
         const value = e.target.value;
         setForm(values => ({...values, [name]: value }))
     }
+
     const handleSubmit = (e) => {
         e.preventDefault();
+        // addTicket(form);
     }
+
     return (
             <form onSubmit={handleSubmit}> 
                 <div class="form-group">
