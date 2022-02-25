@@ -1,6 +1,6 @@
 function Header() {
     return (
-        <h1>NC Help</h1>
+        <h1>NorthHelpers</h1>
     )
 }
 
