@@ -67,10 +67,14 @@ h1, h2, h3 {
     color: #ffffff;
 }
 
-#ticketHistoryContainer ul li.single-ticket-list button.open {
+#ticketHistoryContainer ul li.single-ticket-list button.open, button.display {
     background-color: #eb1b24;
 }
 
 #ticketHistoryContainer ul li.single-ticket-list button.resolved {
     background-color: rgb(14, 105, 14);
+}
+
+#ticketHistoryContainer ul li.single-ticket-list button.hide {
+    display: none;
 }

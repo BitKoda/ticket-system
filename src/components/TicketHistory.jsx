@@ -1,5 +1,5 @@
 import TicketItem from "./TicketItem";
-export default function TicketHistory({tickets, updateResolved}) {
+export default function TicketHistory({tickets, updateResolved, deleteResolvedTicket}) {
       return (
           <div id="ticketHistory">
             <h2>
@@ -12,6 +12,7 @@ export default function TicketHistory({tickets, updateResolved}) {
                     <TicketItem
                       key = {ticket.zoomUrl}
                       updateResolved = {updateResolved}
+                      deleteResolvedTicket = {deleteResolvedTicket}
                       ticket = {ticket}
                     />
                     )

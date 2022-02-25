@@ -22,6 +22,15 @@ export default function TicketManager() {
             })
             setTickets(updatedTickets);
         }
+
+        const deleteResolvedTicket = (ticketToDelete) => {
+          const updatedTickets = tickets.filter((ticket) => {        
+            if (ticket !== ticketToDelete){
+              return {...ticket}
+            }
+          })
+          setTickets(updatedTickets);
+      }
     
         const addTicket = (ticketToAdd) => {
           setTickets((tickets) =>{
@@ -52,7 +61,11 @@ export default function TicketManager() {
     return (
         <>
         <HelpForm form = {form} handleChange = {handleChange} handleSubmit = {handleSubmit}/>
-        <TicketHistory tickets = {tickets} updateResolved= {updateResolved} />
+        <TicketHistory 
+          tickets = {tickets} 
+          updateResolved = {updateResolved} 
+          deleteResolvedTicket = {deleteResolvedTicket}
+        />
         </>
     )
 }

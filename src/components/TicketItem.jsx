@@ -1,4 +1,4 @@
-export default function TicketItem({ticket,updateResolved}) {
+export default function TicketItem({ticket, updateResolved, deleteResolvedTicket}) {
     return (
         <li className="single-ticket-list">
             <h3> Hello, {ticket.username} </h3>
@@ -6,6 +6,10 @@ export default function TicketItem({ticket,updateResolved}) {
             <a href={ticket.zoomUrl} > Click here to join the zoom </a>
             <button className={ticket.resolved ? "resolved" : "open"} onClick={() => updateResolved(ticket)}>
                 {ticket.resolved ? "Resolved" : "Open"}
+            </button>
+            <button className={ticket.resolved ? "display" : "hide"} 
+                    onClick={() => deleteResolvedTicket(ticket)}>
+                Delete
             </button>
         </li>
 
