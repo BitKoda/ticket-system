@@ -4,7 +4,9 @@ export default function TicketItem({ticket,updateResolved}) {
             <h3> Hello, {ticket.username} </h3>
             <p> {ticket.problem} </p>
             <a href={ticket.zoomUrl} > Click here to join the zoom </a>
-            <button className="open">Open</button>
+            <button className={ticket.resolved ? "resolved" : "open"} onClick={() => updateResolved(ticket)}>
+                {ticket.resolved ? "Resolved" : "Open"}
+            </button>
         </li>
 
     )

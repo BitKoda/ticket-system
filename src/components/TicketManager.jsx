@@ -14,7 +14,7 @@ export default function TicketManager() {
         const updateResolved = (ticketToUpdate) => {
             const updatedTickets = tickets.map((ticket) => {
               if (ticket === ticketToUpdate){
-                return {...ticket, resolved:!ticket.resolved}
+                return {...ticket, resolved: !ticket.resolved}
               }
                else {
                  return ticket
@@ -30,15 +30,23 @@ export default function TicketManager() {
         }
 
         const [form, setForm] = useState({username: "", problem: "", zoomUrl: "", resolved: false})
+        
         const handleChange = (e) => {
             const name = e.target.name;
             const value = e.target.value;
-            setForm(values => ({...values, [name]: value }))
+            setForm(values => ({...values, [name]: value }));
         }
     
         const handleSubmit = (e) => {
             e.preventDefault();
             addTicket(form);
+            setForm({username: "", problem: "", zoomUrl: "", resolved: false});
+        }
+
+        const handleClick = (e) => {
+          e.preventDefault();
+          console.log(e);
+          //setTickets(values => ({...values, [resolved]: !tickets.resolved }))
         }
 
     return (
